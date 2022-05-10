@@ -31,5 +31,6 @@ export function getFromSQLite(): string | undefined {
     throw new Error(`Failed to get Values! ${JSON.stringify(status)}`);
   }
 
-  return rows.item(0);
+  const row = rows.item(0);
+  return row.value;
 }
