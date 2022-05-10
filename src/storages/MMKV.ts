@@ -1,6 +1,9 @@
 import {MMKV} from 'react-native-mmkv';
 
 const storage = new MMKV();
+
+storage.clearAll();
+
 const key = 'k';
 storage.set(key, 'hello');
 
