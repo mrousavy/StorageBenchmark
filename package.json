@@ -15,6 +15,7 @@
     "react-native": "0.68.1",
     "react-native-mmkv": "^2.4.0",
     "react-native-quick-sqlite": "^3.1.1",
+    "realm": "^10.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
