@@ -1,13 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React, {useCallback} from 'react';
 import {
   Button,
@@ -19,6 +9,10 @@ import {
 import {getFromAsyncStorage} from './storages/AsyncStorage';
 import {getFromMMKV} from './storages/MMKV';
 import {getFromSQLite} from './storages/SQLite';
+
+declare global {
+  const performance: {now: () => number};
+}
 
 const iterations = 1000;
 
