@@ -17,6 +17,12 @@ Here are the results, ranked from fastest to slowest:
 MMKV is **20x** faster than AsyncStorage (slowest), and **4x** faster than WatermelonDB (second fastest)!
 
 <div align="center">
+  <img src="./img/graph.png" align="center" />
+</div>
+
+Output in the console:
+
+<div align="center">
   <img src="./img/comparison.png" align="center" />
 </div>
 
