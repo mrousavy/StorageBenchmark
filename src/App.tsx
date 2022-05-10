@@ -48,6 +48,7 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const runBenchmarks = useCallback(async () => {
+    console.log('Running Benchmark in 3... 2... 1...');
     await timeout(1000);
     await benchmark('MMKV        ', getFromMMKV);
     await timeout(1000);
