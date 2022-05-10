@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {getFromAsyncStorage} from './storages/AsyncStorage';
 import {getFromMMKV} from './storages/MMKV';
+import {getFromRealm} from './storages/Realm';
 import {getFromSQLite} from './storages/SQLite';
 import {getFromWatermelonDB} from './storages/WatermelonDB';
 
@@ -56,6 +57,8 @@ const App = () => {
     await benchmark('AsyncStorage', getFromAsyncStorage);
     await waitForGC();
     await benchmark('SQLite      ', getFromSQLite);
+    await waitForGC();
+    await benchmark('RealmDB     ', getFromRealm);
     await waitForGC();
     await benchmark('WatermelonDB', getFromWatermelonDB);
   }, []);
