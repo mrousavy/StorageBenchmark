@@ -30,7 +30,7 @@ Output in the console:
 
 ## Run it
 
-1. Clone the repo
+1. Clone the repo and navigate to the `app/` directory
 2. Run `yarn`
 3. Run `yarn pods`
 4. Run `yarn ios --device "YOURPHONENAME"`
@@ -39,7 +39,7 @@ You can also omit the `--device "YOURPHONENAME"` flag, but running on a Simulato
 
 ### JS Engine
 
-The benchmark project currently uses Hermes. To benchmark using JSC instead, set `enable_hermes` to `false` in the [`Podfile`](./ios/Podfile).
+The benchmark project currently uses Hermes. To benchmark using JSC instead, set `enable_hermes` to `false` in the [`Podfile`](./app/ios/Podfile).
 
 ### Hardware
 
