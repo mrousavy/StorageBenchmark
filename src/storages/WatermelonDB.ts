@@ -39,7 +39,6 @@ const promise = database.write(async () => {
       m._raw.id = 'hello';
       m.value = 'hello';
     });
-    console.log('WatermelonDB: Created entry');
     return entry;
   } catch (e) {
     console.error('WatermelonDB: Failed to set value!', e);

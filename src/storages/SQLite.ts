@@ -10,10 +10,8 @@ if (dbOpenResult.status) {
 }
 
 let result = sqlite.executeSql(db, 'DROP TABLE IF EXISTS Benchmark', []);
-if (!result.status) {
-  console.log('Created Table Benchmark');
-} else {
-  console.error(result);
+if (result.status) {
+  console.error('SQLite: Failed to create table!', result);
 }
 
 sqlite.executeSql(
