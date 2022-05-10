@@ -40,8 +40,9 @@ async function benchmark(
   }
 }
 
-async function timeout(ms: number): Promise<void> {
-  return new Promise(r => setTimeout(r, ms));
+async function waitForGC(): Promise<void> {
+  // Wait for Garbage Collection to run. We give a 500ms delay.
+  return new Promise(r => setTimeout(r, 500));
 }
 
 const App = () => {
@@ -49,13 +50,13 @@ const App = () => {
 
   const runBenchmarks = useCallback(async () => {
     console.log('Running Benchmark in 3... 2... 1...');
-    await timeout(1000);
+    await waitForGC();
     await benchmark('MMKV        ', getFromMMKV);
-    await timeout(1000);
+    await waitForGC();
     await benchmark('AsyncStorage', getFromAsyncStorage);
-    await timeout(1000);
+    await waitForGC();
     await benchmark('SQLite      ', getFromSQLite);
-    await timeout(1000);
+    await waitForGC();
     await benchmark('WatermelonDB', getFromWatermelonDB);
   }, []);
 
