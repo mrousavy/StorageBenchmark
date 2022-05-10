@@ -9,6 +9,7 @@ import {
 import {getFromAsyncStorage} from './storages/AsyncStorage';
 import {getFromMMKV} from './storages/MMKV';
 import {getFromSQLite} from './storages/SQLite';
+import {getFromWatermelonDB} from './storages/WatermelonDB';
 
 declare global {
   const performance: {now: () => number};
@@ -39,13 +40,22 @@ async function benchmark(
   }
 }
 
+async function timeout(ms: number): Promise<void> {
+  return new Promise(r => setTimeout(r, ms));
+}
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const runBenchmarks = useCallback(async () => {
+    await timeout(1000);
     await benchmark('MMKV        ', getFromMMKV);
+    await timeout(1000);
     await benchmark('AsyncStorage', getFromAsyncStorage);
+    await timeout(1000);
     await benchmark('SQLite      ', getFromSQLite);
+    await timeout(1000);
+    await benchmark('WatermelonDB', getFromWatermelonDB);
   }, []);
 
   return (
