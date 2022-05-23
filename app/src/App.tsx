@@ -34,7 +34,7 @@ async function benchmark(
     const end = performance.now();
     const diff = end - start;
     console.log(`Finished Benchmark "${label}"! Took ${diff.toFixed(4)}ms!`);
-    return end - start;
+    return diff;
   } catch (e) {
     console.error(`Failed Benchmark "${label}"!`, e);
     return 0;
