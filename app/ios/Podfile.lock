@@ -303,10 +303,10 @@ PODS:
   - React-jsinspector (0.68.1)
   - React-logger (0.68.1):
     - glog
-  - react-native-mmkv (2.4.0):
+  - react-native-mmkv (2.4.3):
     - MMKV (>= 1.2.13)
     - React-Core
-  - react-native-quick-sqlite (3.1.1):
+  - react-native-quick-sqlite (4.0.7):
     - React
     - React-callinvoker
     - React-Core
@@ -375,9 +375,9 @@ PODS:
     - React-jsi (= 0.68.1)
     - React-logger (= 0.68.1)
     - React-perflogger (= 0.68.1)
-  - RealmJS (10.20.0-beta.5):
+  - RealmJS (11.0.0-rc.0):
     - React
-  - RNCAsyncStorage (1.17.4):
+  - RNCAsyncStorage (1.17.10):
     - React-Core
   - simdjson (1.0.0)
   - SocketRocket (0.6.0)
@@ -589,8 +589,8 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 4a4bae5671b064a2248a690cf75957669489d08c
   React-jsinspector: 218a2503198ff28a085f8e16622a8d8f507c8019
   React-logger: f79dd3cc0f9b44f5611c6c7862badd891a862cf8
-  react-native-mmkv: 22986da0cb1e2202993f4598d9ba6009d0504fc7
-  react-native-quick-sqlite: 80efc7079775b93d4abb37334be02e1ab3546af8
+  react-native-mmkv: 1265a348a4711097ba29c8bcefd5971f48220f2b
+  react-native-quick-sqlite: 1207a3a3c184b059a78385d206f3e6e2436730f7
   React-perflogger: 30ab8d6db10e175626069e742eead3ebe8f24fd5
   React-RCTActionSheet: 4b45da334a175b24dabe75f856b98fed3dfd6201
   React-RCTAnimation: d6237386cb04500889877845b3e9e9291146bc2e
@@ -603,14 +603,14 @@ SPEC CHECKSUMS:
   React-RCTVibration: 9e344c840176b0af9c84d5019eb4fed8b3c105a1
   React-runtimeexecutor: 7285b499d0339104b2813a1f58ad1ada4adbd6c0
   ReactCommon: bf2888a826ceedf54b99ad1b6182d1bc4a8a3984
-  RealmJS: 772520fb85c19b65c2ea0c8f9aa6e790a905a377
-  RNCAsyncStorage: 9367a646dc24e3ab7b6874d79bc1bfd0832dce58
+  RealmJS: 6ee99e016e85a71233f92c64b8255007810b7478
+  RNCAsyncStorage: 0c357f3156fcb16c8589ede67cc036330b6698ca
   simdjson: c96317b3a50dff3468a42f586ab7ed22c6ab2fd9
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   WatermelonDB: e043b1a32ddc63864eb539b562e86ef80f8224cd
   Yoga: 17cd9a50243093b547c1e539c749928dd68152da
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 33f51964d4ef4bf77d6522ac44c482779ec30018
+PODFILE CHECKSUM: c3c24ecab54de114c3b7850f7d5b2d51bd9c2059
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2

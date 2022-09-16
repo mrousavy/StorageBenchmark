@@ -20,7 +20,6 @@ target 'StorageBenchmark' do
   )
 
   # If you're using autolinking, this line might not be needed
-  pod 'WatermelonDB', :path => '../node_modules/@nozbe/watermelondb'
 
   # NOTE: Do not remove, needed to keep WatermelonDB compiling:
   pod 'React-jsi', :path => '../node_modules/react-native/ReactCommon/jsi', :modular_headers => true

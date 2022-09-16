@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "@nozbe/watermelondb": "^0.24.0",
-    "@react-native-async-storage/async-storage": "^1.17.4",
+    "@react-native-async-storage/async-storage": "^1.17.10",
     "react": "17.0.2",
     "react-native": "0.68.1",
-    "react-native-mmkv": "^2.4.0",
-    "react-native-quick-sqlite": "^3.1.1",
-    "realm": "^10.20.0-beta.5"
+    "react-native-mmkv": "^2.4.3",
+    "react-native-quick-sqlite": "^4.0.7",
+    "realm": "11.0.0-rc.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
