@@ -11,6 +11,7 @@ import {getFromMMKV} from './storages/MMKV';
 import {getFromRealm} from './storages/Realm';
 import {getFromSQLite} from './storages/SQLite';
 import {getFromWatermelonDB} from './storages/WatermelonDB';
+import {getFromMMKVEncrypted} from './storages/MMKVEncrypted';
 
 declare global {
   const performance: {now: () => number};
@@ -45,7 +46,6 @@ async function waitForGC(): Promise<void> {
   // Wait for Garbage Collection to run. We give a 500ms delay.
   return new Promise(r => setTimeout(r, 500));
 }
-
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -53,6 +53,8 @@ const App = () => {
     console.log('Running Benchmark in 3... 2... 1...');
     await waitForGC();
     await benchmark('MMKV        ', getFromMMKV);
+    await waitForGC();
+    await benchmark('MMKV Encrypt', getFromMMKVEncrypted);
     await waitForGC();
     await benchmark('AsyncStorage', getFromAsyncStorage);
     await waitForGC();
