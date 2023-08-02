@@ -1,8 +1,8 @@
-import {getAllGenericPasswordServices, resetGenericPassword, setGenericPassword, getGenericPassword} from 'react-native-keychain';
+import {resetGenericPassword, setGenericPassword, getGenericPassword} from 'react-native-keychain';
 
 const key = 'k';
 
-getAllGenericPasswordServices().then(services => services.forEach((service) => resetGenericPassword({ service })))
+resetGenericPassword()
 setGenericPassword(key, "hello")
 
 export async function getFromReactNativeKeychain(): Promise<string | undefined> {
