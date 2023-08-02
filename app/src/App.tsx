@@ -8,11 +8,12 @@ import {
 } from 'react-native';
 import {getFromAsyncStorage} from './storages/AsyncStorage';
 import {getFromMMKV} from './storages/MMKV';
-import {getFromKeychain} from './storages/ReactNativeKeychain';
+import {getFromReactNativeKeychain} from './storages/ReactNativeKeychain';
 import {getFromRealm} from './storages/Realm';
 import {getFromSQLite} from './storages/SQLite';
 import {getFromWatermelonDB} from './storages/WatermelonDB';
 import {getFromMMKVEncrypted} from './storages/MMKVEncrypted';
+import {getFromExpoSecureStorage} from "./storages/ExpoSecureStorage";
 
 declare global {
   const performance: {now: () => number};
@@ -59,7 +60,9 @@ const App = () => {
     await waitForGC();
     await benchmark('AsyncStorage         ', getFromAsyncStorage);
     await waitForGC();
-    await benchmark('React Native Keychain', getFromKeychain);
+    await benchmark('Expo Secure Storage  ', getFromExpoSecureStorage);
+    await waitForGC();
+    await benchmark('React Native Keychain', getFromReactNativeKeychain);
     await waitForGC();
     await benchmark('SQLite               ', getFromSQLite);
     await waitForGC();
