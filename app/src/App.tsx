@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {getFromAsyncStorage} from './storages/AsyncStorage';
 import {getFromMMKV} from './storages/MMKV';
+import {getFromKeychain} from './storages/ReactNativeKeychain';
 import {getFromRealm} from './storages/Realm';
 import {getFromSQLite} from './storages/SQLite';
 import {getFromWatermelonDB} from './storages/WatermelonDB';
@@ -52,17 +53,19 @@ const App = () => {
   const runBenchmarks = useCallback(async () => {
     console.log('Running Benchmark in 3... 2... 1...');
     await waitForGC();
-    await benchmark('MMKV        ', getFromMMKV);
+    await benchmark('MMKV                 ', getFromMMKV);
     await waitForGC();
-    await benchmark('MMKV Encrypt', getFromMMKVEncrypted);
+    await benchmark('MMKV Encrypt         ', getFromMMKVEncrypted);
     await waitForGC();
-    await benchmark('AsyncStorage', getFromAsyncStorage);
+    await benchmark('AsyncStorage         ', getFromAsyncStorage);
     await waitForGC();
-    await benchmark('SQLite      ', getFromSQLite);
+    await benchmark('React Native Keychain', getFromAsyncStorage);
     await waitForGC();
-    await benchmark('RealmDB     ', getFromRealm);
+    await benchmark('SQLite               ', getFromSQLite);
     await waitForGC();
-    await benchmark('WatermelonDB', getFromWatermelonDB);
+    await benchmark('RealmDB              ', getFromRealm);
+    await waitForGC();
+    await benchmark('WatermelonDB         ', getFromWatermelonDB);
   }, []);
 
   return (
