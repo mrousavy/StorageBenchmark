@@ -59,7 +59,7 @@ const App = () => {
     await waitForGC();
     await benchmark('AsyncStorage         ', getFromAsyncStorage);
     await waitForGC();
-    await benchmark('React Native Keychain', getFromAsyncStorage);
+    await benchmark('React Native Keychain', getFromKeychain);
     await waitForGC();
     await benchmark('SQLite               ', getFromSQLite);
     await waitForGC();
