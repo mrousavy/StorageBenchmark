@@ -21,7 +21,8 @@ realm.write(() => {
   });
 });
 
+const object = realm.objectForPrimaryKey('Test', 1);
+
 export function getFromRealm() {
-  const object = realm.objectForPrimaryKey('Test', 1);
   return object.value;
 }
